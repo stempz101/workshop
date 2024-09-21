@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.reg__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.reg__wrapper {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reg__header {
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.reg__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-control-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-control__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control__label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.required-field::after {
+    content: "*";
+    color: red;
+    position: absolute;
+}
+
+.form-control__input {
+    border: none;
+    height: 44px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control__input:focus {
+    outline: #171a1f solid 0.5px;
+    box-shadow: 0 0 0 0.25rem rgb(230, 231, 233);
+}
+
+.register-btn {
+    border: none;
+    height: 44px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background: #00dcff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #00c9e9;
+}
+
+.register-btn:active {
+    background-color: #00afcb;
+}
+
+.messages__wrapper {
+    position: absolute;
+    width: 400px;
+    top: 30px;
+    left: calc(100% - 50%);
+    margin-left: -200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    font-weight: 500;
+}
+
+.message.message-success {
+    border-color: #007900;
+    background-color: #2dc940;
+    color: #003f00;
+}
+
+.message.message-error {
+    background-color: #fd5151;
+    border-color: #852525;
+    color: #551717;
+}

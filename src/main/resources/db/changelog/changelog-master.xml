@@ -1,0 +1,15 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet id="1-postgresql" author="maksymkr" dbms="postgresql">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="users_"/>
+      </not>
+    </preConditions>
+
+    <sqlFile path="/db/changelog/wshop-changelogs/default-tables.sql"/>
+  </changeSet>
+
+</databaseChangeLog>
